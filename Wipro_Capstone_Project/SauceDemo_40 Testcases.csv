@@ -1,0 +1,44 @@
+﻿TestCase ID,Test Case Title,Module,Test Designed By,Test Designed Date,Pre-Conditions,Test Data,Test Steps,Expected Result,Actual Result,Status,Severity,Priority,Environment,Comments
+TC_LOGIN_001,Verify login page loads successfully,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,"1. Open URL
+2. Wait for page load",Page loads successfully,Page loaded,Pass,High,High,QA,Works as expected
+TC_LOGIN_002,Verify page title,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,Check page title,Swag Labs,Swag Labs,Pass,High,High,QA,Works as expected
+TC_LOGIN_003,Verify logo is visible,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,Check Swag Labs logo,Logo visible,Logo visible,Pass,Medium,Medium,QA,Works as expected
+TC_LOGIN_004,Verify Username & Password fields displayed,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,Check fields,Both fields visible,Both visible,Pass,High,High,QA,Works as expected
+TC_LOGIN_005,Verify Login button displayed & enabled,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,Check login button,Displayed & enabled,Displayed & enabled,Pass,High,High,QA,Works as expected
+TC_LOGIN_006,Verify placeholder text in username field,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,Check username placeholder,Username,Username,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_007,Verify placeholder text in password field,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,Check password placeholder,Password,Password,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_008,Verify Login button text,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,N/A,Check button text,Login,Login,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_009,Login with standard_user / secret_sauce,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,standard_user/secret_sauce,"Enter creds, click login",Inventory page displayed,Inventory page displayed,Pass,High,High,QA,Works as expected
+TC_LOGIN_010,Login with locked_out_user / secret_sauce,Login,Bhargavi Prasanna,8/30/2025,User is on login page,locked_out_user/secret_sauce,"Enter creds, click login",Error shown,Error shown,Pass,High,High,QA,Works as expected
+TC_LOGIN_011,Login with problem_user / secret_sauce,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,problem_user/secret_sauce,"Enter creds, click login",Broken images displayed,Broken images displayed,Fail,Medium,Medium,QA,Bug logged
+TC_LOGIN_012,Login with performance_glitch_user / secret_sauce,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,performance_glitch_user/secret_sauce,"Enter creds, click login",Inventory loads slowly,Inventory loads slowly,Pass,Low,Low,QA,Known issue
+TC_LOGIN_013,Login with blank username + valid password,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,blank/secret_sauce,Leave username blank,Error 'Username is required',Error displayed,Pass,High,High,QA,Works as expected
+TC_LOGIN_014,Login with valid username + blank password,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,standard_user/blank,Leave password blank,Error 'Password is required',Error displayed,Pass,High,High,QA,Works as expected
+TC_LOGIN_015,Login with both blank,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,blank/blank,Leave both blank,Error 'Username is required',Error displayed,Pass,High,High,QA,Works as expected
+TC_LOGIN_016,Login with invalid creds,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,invalid/invalid,Enter invalid,Error 'do not match',Error displayed,Pass,High,High,QA,Works as expected
+TC_LOGIN_017,Verify error icon appears when login fails,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,invalid creds,Attempt login,Error icon appears,Error icon appears,Pass,Medium,Medium,QA,Works as expected
+TC_LOGIN_018,Verify error icon disappears when input cleared,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,invalid creds,Clear fields,Icon disappears,Icon disappears,Pass,Medium,Medium,QA,Works as expected
+TC_LOGIN_019,Verify error close button works,Login,Bhargavi Prasanna,30-Aug-25,User is on login page,invalid creds,Click close,Error disappears,Error disappears,Pass,Medium,Medium,QA,Works as expected
+TC_LOGIN_020,Verify session persists until logout,Login,Bhargavi Prasanna,30-Aug-25,User is logged in,standard_user/secret_sauce,Refresh page,Still logged in,Still logged in,Pass,High,High,QA,Works as expected
+TC_LOGIN_021,Verify direct access inventory without login,Login,Bhargavi Prasanna,30-Aug-25,User not logged in,N/A,Navigate to /inventory.html,Redirected to login,Redirected,Pass,High,High,QA,Works as expected
+TC_LOGIN_022,Verify all 6 products are displayed,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in as standard_user,N/A,Count items,6 products visible,6 visible,Pass,High,High,QA,Works as expected
+TC_LOGIN_023,Verify product images visible,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Check images,All images displayed,All images displayed,Pass,Medium,Medium,QA,Works as expected
+TC_LOGIN_024,Verify product prices visible,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Check prices,Prices visible,Prices visible,Pass,Medium,Medium,QA,Works as expected
+TC_LOGIN_025,Verify add to cart button for each product,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Check buttons,Buttons displayed,Buttons displayed,Pass,High,High,QA,Works as expected
+TC_LOGIN_026,Verify filter dropdown has 4 options,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Check dropdown,"A-Z, Z-A, Low-High, High-Low",4 options,Pass,Medium,Medium,QA,Works as expected
+TC_LOGIN_027,Verify sort by A-Z works,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Sort A-Z,Products sorted A-Z,Sorted correctly,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_028,Verify sort by Z-A works,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Sort Z-A,Products sorted Z-A,Sorted correctly,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_029,Verify sort by Low-High works,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Sort Low-High,Sorted by price,Sorted correctly,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_030,Verify sort by High-Low works,Inventory,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Sort High-Low,Sorted by price,Sorted correctly,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_031,Add product to cart,Cart,Bhargavi Prasanna,30-Aug-25,User logged in,Backpack,Click add to cart,Cart shows 1 item,1 item in cart,Pass,High,High,QA,Works as expected
+TC_LOGIN_032,Remove product from cart,Cart,Bhargavi Prasanna,30-Aug-25,User logged in,Backpack,Add then remove,Cart empty,Cart empty,Pass,High,High,QA,Works as expected
+TC_LOGIN_033,Verify cart badge count,Cart,Bhargavi Prasanna,30-Aug-25,User logged in,2 products,Add 2 items,Badge shows 2,Badge shows 2,Pass,High,High,QA,Works as expected
+TC_LOGIN_034,Verify checkout page loads,Checkout,Bhargavi Prasanna,30-Aug-25,Items in cart,N/A,Click checkout,Checkout page opens,Checkout page opens,Pass,High,High,QA,Works as expected
+TC_LOGIN_035,Verify entering user details in checkout step 1,Checkout,Bhargavi Prasanna,30-Aug-25,User in checkout step 1,John/Doe/12345,Enter details,Step 2 opens,Step 2 opens,Pass,High,High,QA,Works as expected
+TC_LOGIN_036,Verify error for blank details,Checkout,Bhargavi Prasanna,30-Aug-25,User in checkout step 1,Blank fields,Leave blank,Error shown,Error shown,Pass,High,High,QA,Works as expected
+TC_LOGIN_037,Verify finish checkout works,Checkout,Bhargavi Prasanna,30-Aug-25,Step 2 items ready,N/A,Click finish,Thank you page,Thank you page,Pass,High,High,QA,Works as expected
+TC_LOGIN_038,Verify menu opens,Logout,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Click menu button,Menu opens,Menu opens,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_039,Verify logout option visible,Logout,Bhargavi Prasanna,30-Aug-25,Menu open,N/A,Check menu options,Logout visible,Logout visible,Pass,Low,Low,QA,Works as expected
+TC_LOGIN_040,Verify logout redirects to login page,Logout,Bhargavi Prasanna,30-Aug-25,User logged in,N/A,Click logout,Redirected to login,Redirected,Pass,High,High,QA,Works as expected
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
